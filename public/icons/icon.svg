@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0d1220"/>
+  <rect x="60" y="60" width="392" height="392" rx="64" fill="#1e2d4a"/>
+  <!-- Book base -->
+  <rect x="140" y="160" width="100" height="180" rx="8" fill="#3b82f6"/>
+  <rect x="272" y="160" width="100" height="180" rx="8" fill="#3b82f6"/>
+  <rect x="240" y="155" width="32" height="190" rx="4" fill="#1e40af"/>
+  <!-- Chart lines going up -->
+  <polyline points="150,300 190,260 230,275" stroke="#22c55e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <polyline points="282,300 322,240 362,210" stroke="#22c55e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Dots -->
+  <circle cx="230" cy="275" r="8" fill="#22c55e"/>
+  <circle cx="362" cy="210" r="8" fill="#22c55e"/>
+</svg>
