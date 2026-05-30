@@ -10,6 +10,7 @@ import AuthGate from './components/AuthGate';
 import { calcPnl, getStatus } from './utils/pnl';
 import { fmt$, fmtPnl, pnlColor, dte } from './utils/format';
 import { supabase } from './lib/supabase';
+import { useInactivityLogout } from './hooks/useInactivityLogout';
 
 function StatCard({ icon: Icon, label, value, sub, valueClass = 'text-white' }) {
   return (
@@ -31,6 +32,7 @@ const TABS = [
 ];
 
 function AppInner() {
+  useInactivityLogout();
   const { openTrades, closedTrades, loading, addTrade, closeTrade, rollTrade, markAssigned, addAdjustment, deleteAdjustment, deleteTrade, updateTrade, reopenTrade } = useTrades();
   const [tab, setTab]           = useState(0);
   const [showForm, setShowForm] = useState(false);
