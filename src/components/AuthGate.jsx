@@ -32,20 +32,20 @@ function OtpInput({ onComplete }) {
   };
 
   return (
-    <div className="flex gap-2 justify-center">
+    <div className="flex gap-1.5 justify-center">
       {digits.map((d, i) => (
         <input
           key={i}
           ref={el => inputs.current[i] = el}
           type="text"
           inputMode="numeric"
-          maxLength={6}
+          maxLength={OTP_LENGTH}
           value={d}
           autoFocus={i === 0}
           onChange={e => handleChange(i, e.target.value)}
           onKeyDown={e => handleKeyDown(i, e)}
           onFocus={e => e.target.select()}
-          className="w-11 h-13 text-center text-xl font-bold bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 py-3"
+          className="w-8 text-center text-lg font-bold bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 py-3"
         />
       ))}
     </div>
@@ -161,7 +161,7 @@ export default function AuthGate({ children }) {
               <div className="text-center">
                 <p className="text-white font-semibold mb-1">Enter your code</p>
                 <p className="text-gray-400 text-sm">
-                  We sent a 6-digit code to<br />
+                  We sent an 8-digit code to<br />
                   <span className="text-blue-300">{email}</span>
                 </p>
               </div>
